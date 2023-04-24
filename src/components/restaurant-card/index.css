@@ -1,0 +1,95 @@
+.card-container {
+  width: 300px;
+  padding: 0.5rem;
+}
+
+.card-container:hover {
+  border: 1px solid #9e9e9e;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-desc {
+  margin-top: 15px;
+}
+
+.card-title {
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.card-cuisine {
+  color: #686b78;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.card-assets {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 12px;
+  justify-content: space-between;
+  color: #535665;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  background-color: #48c479;
+  color: #fff;
+  height: 20px;
+  padding: 5px;
+  font-weight: 400;
+}
+
+.card-rating > .icon-star {
+  margin-right: 4px;
+}
+
+.card-offers {
+  border-top: 1px solid #e9e9eb;
+  padding-top: 14px;
+  margin-top: 14px;
+  color: #8a584b;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.card-action-button-container {
+  color: #686b78;
+  font-size: 13px;
+  border-top: 1px solid #e9e9eb;
+  padding-top: 14px;
+  margin-top: 14px;
+  visibility: hidden;
+  left: 20px;
+  right: 20px;
+  bottom: 14px;
+}
+
+.action-button {
+  color: #5d8ed5;
+  float: right;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.card-container:hover .card-action-button-container {
+  visibility: visible;
+}
