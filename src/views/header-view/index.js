@@ -1,15 +1,12 @@
 import React from "react";
 import "./index.css";
+import { LOGO_URL } from "../../constant";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img
-          className="logo"
-          src="https://img.freepik.com/premium-vector/simple-minimalist-food-bag-restaurant-delivery-service-logo-design-vector_493994-1029.jpg"
-          alt="app-logo"
-        />
+        <img className="logo" src={LOGO_URL} alt="app-logo" />
       </div>
       <div className="nav-container">
         <ul className="nav-list">
