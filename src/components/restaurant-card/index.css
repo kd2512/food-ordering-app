@@ -3,6 +3,7 @@
   padding: 0.5rem;
   border: 1px solid #fff;
   margin-bottom: 3rem;
+  margin-right: 2rem;
 }
 
 .card-container:hover {
@@ -94,4 +95,9 @@
 
 .card-container:hover .card-action-button-container {
   visibility: visible;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
 }
