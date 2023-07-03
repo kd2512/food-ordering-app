@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import { LOGO_URL } from "../../constant";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [authBtn, setAuthBtn] = useState("Login");
@@ -20,10 +21,18 @@ const Header = () => {
       </div>
       <div className="nav-container">
         <ul className="nav-list">
-          <li className="nav-items">Home</li>
-          <li className="nav-items">About</li>
-          <li className="nav-items">Contact</li>
-          <li className="nav-items">Cart</li>
+          <li className="nav-items">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="nav-items">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="nav-items">
+            <Link to="/contact">Contact</Link>
+          </li>
+          <li className="nav-items">
+            <Link to="/cart">Cart</Link>
+          </li>
           <li
             className="nav-items"
             style={{ cursor: "pointer" }}
