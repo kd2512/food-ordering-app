@@ -5,7 +5,6 @@ import { AiFillStar } from "react-icons/ai";
 import { RES_CARD_IMG_BASE_URL } from "../../constant";
 
 const RestaurantCard = ({ cardData }) => {
-  console.log("in res", cardData);
   return (
     <div>
       {cardData && (

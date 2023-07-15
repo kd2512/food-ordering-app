@@ -8,3 +8,8 @@
   justify-content: center;
   margin-bottom: 2rem;
 }
+
+.restaurant-container > a {
+  text-decoration: none;
+  color: inherit;
+}

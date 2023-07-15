@@ -28,6 +28,7 @@
 .card-title {
   font-weight: 500;
   word-break: break-word;
+  font-size: 1.25rem;
 }
 
 .card-cuisine {

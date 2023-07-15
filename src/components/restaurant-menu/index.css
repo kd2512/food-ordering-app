@@ -1,0 +1,173 @@
+.res-menu {
+  width: 1000px;
+  margin: 0 auto;
+  letter-spacing: 0.7px;
+  word-spacing: 2px;
+  padding: 3rem;
+}
+
+.res-info-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.res-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #282c3f;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.res-cuisines {
+  font-size: 0.93rem;
+  color: #7e808c;
+  height: calc(0.93rem + 2px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.res-address {
+  font-size: 0.93rem;
+  color: #7e808c;
+  height: 16px;
+}
+
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  border: 1px solid #e9e9eb;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px #f9f9f9;
+}
+
+.res-rating {
+  color: #3d9b6d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9e9eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.res-reviews {
+  font-size: 11px;
+  color: #8b8d97;
+  font-weight: 600;
+}
+
+.res-info-separator {
+  border: none;
+  border-bottom: 1px dashed #dedede;
+  margin: 1.5rem 0;
+}
+
+.res-info-2 {
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  color: #3e4152;
+}
+
+.separator {
+  border-bottom: 0.5px solid #d3d3d3;
+  height: 0.5px;
+  margin: 30px auto;
+}
+
+.category-heading {
+  color: #3e4152;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 2.25rem;
+}
+
+.dish {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish-name {
+  color: #3e4152;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.dish-price {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: #3e4152;
+}
+
+.dish-description {
+  width: 550px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: gray;
+  padding: 0.5rem;
+}
+
+.dish-image-container {
+  position: relative;
+  margin-left: 16px;
+  min-width: 118px;
+  height: 120px;
+  font-size: 0;
+}
+
+.image {
+  width: 118px;
+  height: 96px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.add-btn-container {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.main-btn {
+  width: 96px !important;
+  height: 36px !important;
+  position: relative;
+  min-height: 36px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  box-shadow: 0 3px 8px #e9e9eb;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid #d4d5d9;
+  color: #60b246;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.add-btn {
+  padding-top: 4px;
+  color: #60b246;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}

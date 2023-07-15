@@ -3,6 +3,8 @@ import RestaurantCard from "../../components/restaurant-card";
 import "./index.css";
 import { useState } from "react";
 import LoadingShimmer from "../../components/loading-shimmer";
+import { MAIN_API } from "../../constant";
+import { Link } from "react-router-dom";
 
 const MainView = () => {
   const [restaurantList, setRestaurantList] = useState([]);
@@ -28,16 +30,18 @@ const MainView = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.7605545&lng=83.3731675&page_type=DESKTOP_WEB_LISTING"
-      );
+      const data = await fetch(MAIN_API);
       const json = await data.json();
 
-      const newData = json?.data?.cards?.map((item) => {
-        if (item.cardType === "seeAllRestaurants") {
-          return item.data?.data?.cards;
-        }
-      });
+      const newData = json?.data?.cards
+        ?.map((item) => {
+          if (item.cardType === "seeAllRestaurants") {
+            console.log("inside if");
+            return item.data?.data?.cards;
+          }
+        })
+        .filter((item) => item !== undefined);
+      console.log(newData);
       setRestaurantList(...newData);
     };
 
@@ -58,14 +62,18 @@ const MainView = () => {
           <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
-      {restaurantList.length > 0 ? (
+      {restaurantList?.length > 0 ? (
         <div className="restaurant-container">
           {searchTerm || searchResults.length > 0
             ? searchResults.map((data, index) => (
-                <RestaurantCard key={index} cardData={data.data} />
+                <Link to={`restaurants/${data.data.id}`}>
+                  <RestaurantCard key={data.data.id} cardData={data.data} />
+                </Link>
               ))
             : restaurantList.map((data, index) => (
-                <RestaurantCard key={index} cardData={data.data} />
+                <Link to={`restaurants/${data.data.id}`}>
+                  <RestaurantCard key={data.data.id} cardData={data.data} />
+                </Link>
               ))}
         </div>
       ) : (

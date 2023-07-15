@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/about-page";
 import Contact from "./components/contact-page";
 import Error from "./components/error-page";
+import RestaurantMenu from "./components/restaurant-menu";
 
 /**
  * <Outlet /> is a function provided by react-router, in which the
@@ -51,6 +52,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu />,
       },
     ],
     errorElement: <Error />,
