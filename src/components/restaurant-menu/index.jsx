@@ -1,29 +1,17 @@
 import { Fragment, useEffect, useState } from "react";
 import LoadingShimmer from "../loading-shimmer";
 import { useParams } from "react-router-dom";
-import { MENU_API } from "../../constant";
 import "./index.css";
 import { AiFillStar } from "react-icons/ai";
 import { MdWatchLater } from "react-icons/md";
 import { NonVegIcon, VegIcon } from "../veg-nonveg-icon";
 import { MENU_ITEM_IMG_BASE_URL } from "../../constant";
+import useRestaurantInfo from "../../hooks/useRestaurantInfo";
 
 const RestaurantMenu = () => {
-  const [resMenu, setResMenu] = useState(null);
-
   const { resId } = useParams();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch(`${MENU_API}${resId}`);
-      const json = await data.json();
-      setResMenu(json.data);
-    };
-
-    fetchData();
-  }, []);
-
-  console.log(resMenu);
+  const resMenu = useRestaurantInfo(resId);
 
   if (resMenu === null) return <LoadingShimmer />;
 
@@ -40,9 +28,9 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resMenu?.cards[resMenu?.cards?.length - 1]?.groupedCard?.cardGroupMap
-      ?.REGULAR?.cards[1]?.card?.card;
+      ?.REGULAR?.cards[2]?.card?.card;
 
-  const resDishes = itemCards[0];
+  //const resDishes = itemCards[0];
 
   return (
     <div className="res-menu">
