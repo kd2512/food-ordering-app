@@ -39,7 +39,7 @@ const MainView = () => {
       console.log("json", json);
 
       const newData =
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
 
       console.log("new data", newData);
