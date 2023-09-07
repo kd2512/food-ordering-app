@@ -19,12 +19,12 @@ import RestaurantMenu from "./components/restaurant-menu";
  */
 
 const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
-  );
+	return (
+		<div className="app">
+			<Header />
+			<Outlet />
+		</div>
+	);
 };
 
 /**
@@ -37,29 +37,29 @@ const AppLayout = () => {
  */
 
 const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <MainView />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/restaurants/:resId",
-        element: <RestaurantMenu />,
-      },
-    ],
-    errorElement: <Error />,
-  },
+	{
+		path: "/",
+		element: <AppLayout />,
+		children: [
+			{
+				path: "/",
+				element: <MainView />,
+			},
+			{
+				path: "/about",
+				element: <About />,
+			},
+			{
+				path: "/contact",
+				element: <Contact />,
+			},
+			{
+				path: "/restaurants/:resId",
+				element: <RestaurantMenu />,
+			},
+		],
+		errorElement: <Error />,
+	},
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
